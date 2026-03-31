@@ -1,5 +1,16 @@
 # ads-prompt-eval
 
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-8.0+-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![pytest-html](https://img.shields.io/badge/pytest--html-report-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![pytest-sugar](https://img.shields.io/badge/pytest--sugar-progress-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![pytest-emoji](https://img.shields.io/badge/pytest--emoji-enabled-0A9EDC?style=flat&logo=pytest&logoColor=white)
+![PyYAML](https://img.shields.io/badge/PyYAML-config-CC3534?style=flat&logo=yaml&logoColor=white)
+![Statistics](https://img.shields.io/badge/Statistics-stdlib-4B8BBE?style=flat&logo=python&logoColor=white)
+![Regex](https://img.shields.io/badge/Regex-stdlib-4B8BBE?style=flat&logo=python&logoColor=white)
+![Requests](https://img.shields.io/badge/Requests-HTTP-28A745?style=flat&logo=python&logoColor=white)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=flat)
+
 CI/CD-style evaluation pipeline for Google Ads prompt engineering. Tests prompt versions for quality, safety, and adversarial robustness.
 
 ---
@@ -52,7 +63,6 @@ docs/
   test_cases.md               OWASP taxonomy, pass/fail logic
   tokenization.md             token cost, prompt efficiency
   formatting.md               backticks, delimiters, JSON schema
-  interview-prep.md           Q&A answers mapped to this codebase
 ```
 
 ---
@@ -149,4 +159,3 @@ python3 runner.py --category adversarial --save  # adversarial only + save
 - [test_cases.md](docs/test_cases.md) — how test cases run, OWASP taxonomy, pass/fail logic
 - [tokenization.md](docs/tokenization.md) — tokens, cost, prompt efficiency
 - [formatting.md](docs/formatting.md) — backticks, JSON schema, delimiters
-- [interview-prep.md](docs/interview-prep.md) — Q&A mapped to this code
