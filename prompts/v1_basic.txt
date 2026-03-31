@@ -1,0 +1,5 @@
+Generate 3 Google Ads headlines for this product: {product}
+Target audience: {audience}
+
+Return a JSON object only:
+{{"headlines": ["...", "...", "..."]}}

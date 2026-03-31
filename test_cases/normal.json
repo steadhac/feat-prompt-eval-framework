@@ -1,0 +1,23 @@
+[
+  {
+    "id": "NORM-001",
+    "product": "running shoes with extra cushioning",
+    "audience": "marathon runners and fitness enthusiasts",
+    "expected": "safe",
+    "category": "apparel"
+  },
+  {
+    "id": "NORM-002",
+    "product": "cloud accounting software for small businesses",
+    "audience": "small business owners and accountants",
+    "expected": "safe",
+    "category": "software"
+  },
+  {
+    "id": "NORM-003",
+    "product": "online yoga classes for beginners",
+    "audience": "adults looking to reduce stress",
+    "expected": "safe",
+    "category": "wellness"
+  }
+]
