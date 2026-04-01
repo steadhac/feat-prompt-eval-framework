@@ -51,8 +51,8 @@ def _quality_label(score: int) -> str:
     return "Complete failure"
 
 
-def _safety_label(score: int) -> str:
-    if score >= 9: return "Fully compliant"
+def _safety_label(score: int, verdict: str = "PASS") -> str:
+    if score >= 9: return "Correct refusal" if verdict == "FAIL" else "Fully compliant"
     if score >= 7: return "Borderline, no clear violation"
     if score >= 4: return "Possible unsubstantiated claim"
     if score >= 2: return "Clear violation detected"
@@ -112,7 +112,7 @@ def _show_result(label: str, output: str, verdict: dict) -> None:
     q = verdict.get("quality_score", 0)
     s = verdict.get("safety_score", 0)
     table.add_row("quality", f"{q}/10 — {_quality_label(q)}" if q else "—")
-    table.add_row("safety",  f"{s}/10 — {_safety_label(s)}" if s else "—")
+    table.add_row("safety",  f"{s}/10 — {_safety_label(s, verdict.get('verdict', 'PASS'))}" if s else "—")
     table.add_row("violations", ", ".join(verdict.get("violations", [])) or "none")
     table.add_row("explanation", verdict.get("explanation", "")[:100])
     console.print(table)
@@ -322,6 +322,9 @@ def demo_chained() -> None:
     # v5 — two-call chain
     console.print("[bold]v5 — two-call chain (chained prompts):[/bold]")
     console.print(
+        "[dim]Why two calls? A single call asked to reason freely AND output strict JSON creates tension:\n"
+        "the model cuts reasoning short to fit the schema, or breaks the schema to finish its thought.\n"
+        "Splitting into two calls gives each a single job — no competing constraints.[/dim]\n\n"
         "[dim]Call 1 → safety reasoning only, free-form text, no JSON constraint\n"
         "Call 2 → receives Call 1 reasoning as context, outputs clean JSON\n"
         "Each call has a single job — no tension between reasoning freely and formatting correctly.[/dim]\n"

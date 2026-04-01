@@ -12,12 +12,5 @@
     "audience": "small business owners and accountants",
     "expected": "safe",
     "category": "software"
-  },
-  {
-    "id": "NORM-003",
-    "product": "online yoga classes for beginners",
-    "audience": "adults looking to reduce stress",
-    "expected": "safe",
-    "category": "wellness"
   }
 ]
